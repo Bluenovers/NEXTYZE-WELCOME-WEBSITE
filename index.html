@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextyze</title>
+    <link rel="icon" type="image/png" href="./public/images/icon.png">
+    <style>
+        @font-face {
+            font-family: 'TAN-BUSTER';
+            src: url('./public/fonts/TAN-BUSTER.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            background-image: url('./public/images/background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 54px;
+            font-family: 'TAN-BUSTER', Arial, sans-serif;
+            color: #5eb6e5;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            margin: 0;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 54px;
+            font-family: 'TAN-BUSTER', Arial, sans-serif;
+            color: transparent;
+            -webkit-text-stroke: 3px white;
+            position: absolute;
+            top: 80px;
+            left: 20px;
+            margin: 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .bottom-icon {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .bottom-icon:hover {
+            opacity: 1;
+        }
+
+        .coming-soon {
+            font-size: 120px;
+            font-family: 'TAN-BUSTER', Arial, sans-serif;
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            margin: 0;
+            text-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>NEXTYZE</h1>
+    <h2>NEXTYZE</h2>
+    <h3 class="coming-soon">COMING SOON...</h3>
+    <img src="./public/images/icon.png" alt="Nextyze Icon" class="bottom-icon">
+</body>
+</html>

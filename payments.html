@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nextyze - Donations</title>
+    <title>Nextyze</title>
     <link rel="icon" type="image/png" href="./public/images/icon.png">
-    <!-- PayPal JavaScript SDK - LIVE API -->
-    <script src="https://www.paypal.com/sdk/js?client-id=AYa2mjhTHyVnbdLNYekKHHzVngurHCQd2-fucvrbTSFBNFI7x_FW_kCQLW81Lz6lCV5u6cGG0gro0epM&currency=USD"></script>
     <style>
         @font-face {
             font-family: 'TAN-BUSTER';
@@ -63,22 +61,6 @@
                 inset 0 1px 2px rgba(255, 255, 255, 0.1);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             backdrop-filter: blur(12px);
-            overflow: hidden;
-        }
-
-        .back-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: left 0.5s;
-        }
-
-        .back-button:hover::before {
-            left: 100%;
         }
 
         .back-button:hover {
@@ -116,8 +98,8 @@
             text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        /* Payment Container */
-        .payment-container {
+        /* Content Container */
+        .content-container {
             background: rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(10px);
             border-radius: 20px;
@@ -129,83 +111,19 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .payment-title {
+        .content-title {
             font-size: clamp(28px, 6vw, 48px);
             font-family: 'TAN-BUSTER', Arial, sans-serif;
             color: white;
-            margin: 0 0 10px 0;
+            margin: 0 0 20px 0;
             text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        .payment-subtitle {
+        .content-description {
             font-size: clamp(16px, 3vw, 20px);
-            color: #5eb6e5;
-            margin: 0 0 30px 0;
-            font-weight: bold;
-        }
-
-        .payment-description {
-            font-size: clamp(14px, 2.5vw, 16px);
-            color: rgba(255, 255, 255, 0.8);
-            margin: 0 0 40px 0;
-            line-height: 1.6;
-        }
-
-        /* PayPal Button Container */
-        #paypal-button-container {
-            margin: 30px 0;
-            min-height: 45px;
-        }
-
-        /* Payment Messages */
-        .payment-message {
-            margin: 20px 0;
-            padding: 15px 20px;
-            border-radius: 10px;
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            opacity: 0;
-            transform: translateY(-20px);
-            transition: all 0.3s ease;
-        }
-
-        .payment-message.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .payment-message.success {
-            background-color: #28a745;
             color: white;
-        }
-
-        .payment-message.error {
-            background-color: #dc3545;
-            color: white;
-        }
-
-        /* Security Info */
-        .security-info {
-            margin-top: 30px;
-            padding: 20px;
-            background: rgba(94, 182, 229, 0.1);
-            border-radius: 10px;
-            border: 1px solid rgba(94, 182, 229, 0.3);
-        }
-
-        .security-info h3 {
-            font-size: clamp(16px, 3vw, 18px);
-            color: #5eb6e5;
-            margin: 0 0 10px 0;
-            font-family: 'TAN-BUSTER', Arial, sans-serif;
-        }
-
-        .security-info p {
-            font-size: clamp(12px, 2vw, 14px);
-            color: rgba(255, 255, 255, 0.8);
             margin: 0;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         /* Responsive Design */
@@ -223,7 +141,7 @@
                 right: 15px;
             }
 
-            .payment-container {
+            .content-container {
                 padding: clamp(20px, 4vw, 40px);
                 margin: 20px 0;
             }
@@ -247,7 +165,7 @@
                 right: 10px;
             }
 
-            .payment-container {
+            .content-container {
                 padding: clamp(15px, 3vw, 30px);
                 margin: 15px 0;
             }
@@ -272,7 +190,7 @@
                 right: 5px;
             }
 
-            .payment-container {
+            .content-container {
                 padding: 15px;
                 margin: 10px 0;
                 max-width: 400px;
@@ -293,91 +211,13 @@
         <h1>NEXTYZE</h1>
     </div>
 
-    <!-- Payment Container -->
-    <div class="payment-container">
-        <h1 class="payment-title">Support NEXTYZE</h1>
-        <p class="payment-subtitle">Make a Donation</p>
-        
-        <p class="payment-description">
-            Support our project with a <strong>$1.00</strong> donation through PayPal. 
-            Your contribution helps us continue building amazing experiences.
+    <!-- Content Container -->
+    <div class="content-container">
+        <h1 class="content-title">NEXTYZE</h1>
+        <p class="content-description">
+            Thank you for your interest in supporting NEXTYZE. 
+            More information coming soon.
         </p>
-
-        <!-- PayPal Button Container -->
-        <div id="paypal-button-container"></div>
-        
-        <!-- Payment Messages -->
-        <div id="payment-message" class="payment-message"></div>
-
-        <!-- Security Information -->
-        <div class="security-info">
-            <h3>🔒 Secure & Protected</h3>
-            <p>
-                This transaction is processed securely through PayPal. 
-                Your financial information is never stored on our servers.
-            </p>
-        </div>
     </div>
-
-    <script>
-        // PayPal Checkout Integration
-        paypal.Buttons({
-            createOrder: function(data, actions) {
-                // Set up the transaction
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: '1.00' // $1.00 charge
-                        },
-                        description: 'NEXTYZE Donation'
-                    }]
-                });
-            },
-            onApprove: function(data, actions) {
-                // Capture the payment
-                return actions.order.capture().then(function(details) {
-                    // Show success message with payer's first name
-                    const firstName = details.payer.name.given_name;
-                    showMessage(`Thank you, ${firstName}! Your donation was successful. You will be redirected shortly.`, 'success');
-                    
-                    // Optional: Show alert as requested
-                    alert(`Donation successful! Thank you, ${firstName}!`);
-                    
-                    console.log('Donation completed by:', details.payer.name.given_name);
-                    console.log('Transaction details:', details);
-
-                    // Redirect back to home page after 3 seconds
-                    setTimeout(() => {
-                        window.location.href = 'index.html';
-                    }, 3000);
-                });
-            },
-            onError: function(err) {
-                // Handle checkout errors
-                console.error('PayPal Checkout Error:', err);
-                showMessage('Donation failed. Please try again or contact support.', 'error');
-                
-                // Optional: Show alert for errors
-                alert('Donation failed. Please try again.');
-            },
-            onCancel: function(data) {
-                // Handle when user cancels payment
-                console.log('Payment cancelled by user:', data);
-                showMessage('Donation was cancelled. You can try again or return to the home page.', 'error');
-            }
-        }).render('#paypal-button-container');
-
-        // Function to show payment messages
-        function showMessage(message, type) {
-            const messageDiv = document.getElementById('payment-message');
-            messageDiv.textContent = message;
-            messageDiv.className = `payment-message ${type} show`;
-            
-            // Hide message after 8 seconds (longer for success with redirect info)
-            setTimeout(() => {
-                messageDiv.classList.remove('show');
-            }, 8000);
-        }
-    </script>
 </body>
 </html>

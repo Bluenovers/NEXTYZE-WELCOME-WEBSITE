@@ -266,7 +266,10 @@
         .price {
             font-size: clamp(28px, 5vw, 42px);
             font-weight: 600;
-            color: var(--accent-soft);
+            background: linear-gradient(135deg, #9ad9ff, #5eb6e5);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 8px 18px rgba(94, 182, 229, 0.35);
         }
 
         .per {
@@ -284,19 +287,50 @@
             margin: 0;
             padding: 0;
             list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 10px;
         }
 
         .plan-features li {
-            padding: 6px 10px;
+            position: relative;
+            padding: 12px 14px 12px 40px;
+            border-radius: 14px;
+            background:
+                linear-gradient(135deg, rgba(94, 182, 229, 0.2), rgba(8, 14, 20, 0.7)),
+                radial-gradient(circle at top right, rgba(154, 217, 255, 0.22), transparent 60%);
+            border: 1px solid rgba(154, 217, 255, 0.24);
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), 0 16px 26px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(6px);
+            font-size: 13px;
+            line-height: 1.4;
+            letter-spacing: 0.01em;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .plan-features li::before {
+            content: "";
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            width: 18px;
+            height: 18px;
             border-radius: 999px;
-            border: 1px solid rgba(94, 182, 229, 0.35);
-            background: rgba(94, 182, 229, 0.12);
-            font-size: 12px;
-            letter-spacing: 0.02em;
-            color: rgba(255, 255, 255, 0.82);
+            background: linear-gradient(180deg, #9ad9ff, #5eb6e5);
+            box-shadow: 0 8px 16px rgba(94, 182, 229, 0.45);
+            transform: translateY(-50%);
+        }
+
+        .plan-features li::after {
+            content: "";
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            width: 7px;
+            height: 11px;
+            border-right: 2px solid #031018;
+            border-bottom: 2px solid #031018;
+            transform: translateY(-55%) rotate(45deg);
         }
 
         .section {
@@ -334,13 +368,29 @@
         }
 
         .plan-card {
-            padding: 16px 16px 18px;
-            border-radius: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.14);
-            background: rgba(9, 18, 28, 0.45);
+            position: relative;
+            overflow: hidden;
+            padding: 18px;
+            border-radius: 16px;
+            border: 1px solid rgba(154, 217, 255, 0.2);
+            background: linear-gradient(135deg, rgba(16, 28, 42, 0.85), rgba(8, 14, 20, 0.6));
+            box-shadow: 0 22px 40px rgba(0, 0, 0, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.04);
             display: flex;
             flex-direction: column;
             gap: 8px;
+        }
+
+        .plan-card::after {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -30px;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(154, 217, 255, 0.25), transparent 65%);
+            opacity: 0.8;
+            pointer-events: none;
         }
 
         .plan-name {
@@ -522,34 +572,10 @@
 
         <main class="content container">
             <section class="hero">
-                <div class="hero-copy">
+                <div class="hero-copy hero-copy-top">
                     <p class="kicker">Static website studio</p>
                     <h3 class="headline">Websites for established firms and influencers who want a clean, reliable online presence.</h3>
                     <p class="description">We design fast, static sites for businesses with existing audiences. Simple, polished, and dependable month after month.</p>
-                    <div class="badge-row">
-                        <span class="badge">Static websites only</span>
-                        <span class="badge">Domain + hosting included</span>
-                        <span class="badge">1000+ customers</span>
-                    </div>
-                    <div class="hero-actions">
-                        <a class="btn primary" href="plans.html">View plans</a>
-                        <a class="btn ghost" href="contact.html">Start a site</a>
-                    </div>
-                    <p class="note">Average launch time: 7 days. All plans stay static.</p>
-                    <div class="stats">
-                        <div class="stat-card">
-                            <span class="stat-number">1000+</span>
-                            <span class="stat-label">customers served</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number">7 days</span>
-                            <span class="stat-label">avg launch</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number">24/7</span>
-                            <span class="stat-label">hosting uptime</span>
-                        </div>
-                    </div>
                 </div>
                 <div class="card plan-slider">
                     <div class="plan-slider-head">
@@ -575,7 +601,7 @@
                             <div class="plan-slide is-active" data-plan="starter" tabindex="0">
                                 <p class="plan-name">Starter</p>
                                 <div class="plan">
-                                    <span class="price">$30</span>
+                                    <span class="price">$25</span>
                                     <span class="per">per month</span>
                                 </div>
                                 <p class="plan-note">Domain + hosting + SSL included.</p>
@@ -605,6 +631,31 @@
                         </div>
                     </div>
                     <p class="plan-note">Static websites only. Unlimited edits 24/7. Domain + hosting included.</p>
+                </div>
+                <div class="hero-copy hero-copy-bottom">
+                    <div class="badge-row">
+                        <span class="badge">Static websites only</span>
+                        <span class="badge">Domain + hosting included</span>
+                    </div>
+                    <div class="hero-actions">
+                        <a class="btn primary" href="plans.html">View plans</a>
+                        <a class="btn ghost" href="contact.html">Start a site</a>
+                    </div>
+                    <p class="note">Average launch time: 7 days. All plans stay static.</p>
+                    <div class="stats">
+                        <div class="stat-card">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">customers served</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">7 days</span>
+                            <span class="stat-label">avg launch</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">hosting uptime</span>
+                        </div>
+                    </div>
                 </div>
             </section>
 

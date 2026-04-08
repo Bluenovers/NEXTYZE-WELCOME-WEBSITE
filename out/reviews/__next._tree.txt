@@ -1,0 +1,4 @@
+:HL["/_next/static/chunks/0vtgj2qn1jr6s.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap","style"]
+:HL["/images/icon.png","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"reviews","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"z6v775K3HI9mheOr_-8Ik"}

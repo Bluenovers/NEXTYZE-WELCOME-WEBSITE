@@ -1,0 +1,230 @@
+(globalThis["TURBOPACK"] || (globalThis["TURBOPACK"] = [])).push([typeof document === "object" ? document.currentScript : undefined,
+"[project]/src/components/PlanSlider.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>PlanSlider
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+'use client';
+;
+const plans = [
+    {
+        id: "growth",
+        name: "Growth",
+        price: "$49",
+        note: "Includes custom domain email + business tools.",
+        features: [
+            "Up to 5 pages",
+            "Custom domain email",
+            "SEO setup + analytics",
+            "Unlimited edits",
+            "Mobile-friendly design",
+            "Fast loading speeds"
+        ]
+    },
+    {
+        id: "starter",
+        name: "Starter",
+        price: "$25",
+        note: "Static website with domain + hosting.",
+        features: [
+            "One-page layout",
+            "Custom typography",
+            "SEO basics",
+            "Unlimited edits",
+            "Mobile-friendly design",
+            "Fast loading speeds"
+        ]
+    },
+    {
+        id: "authority",
+        name: "Authority",
+        price: "$120",
+        note: "Includes advanced support.",
+        features: [
+            "Unlimited pages",
+            "Custom domain email suite",
+            "Priority support",
+            "Ongoing optimization",
+            "Mobile-friendly design",
+            "Fast loading speeds"
+        ]
+    }
+];
+const getScrollBehavior = ()=>{
+    if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
+    ;
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+};
+function PlanSlider() {
+    _s();
+    const [activeId, setActiveId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("starter");
+    const slideRefs = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])([]);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "PlanSlider.useEffect": ()=>{
+            const starterIndex = plans.findIndex({
+                "PlanSlider.useEffect.starterIndex": (plan)=>plan.id === "starter"
+            }["PlanSlider.useEffect.starterIndex"]);
+            const slide = slideRefs.current[starterIndex];
+            if (slide) {
+                slide.scrollIntoView({
+                    behavior: "auto",
+                    inline: "center",
+                    block: "nearest"
+                });
+            }
+        }
+    }["PlanSlider.useEffect"], []);
+    const handleSelect = (index)=>{
+        setActiveId(plans[index].id);
+        const slide = slideRefs.current[index];
+        if (slide) {
+            slide.scrollIntoView({
+                behavior: getScrollBehavior(),
+                inline: "center",
+                block: "nearest"
+            });
+        }
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "card plan-slider",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "plan-slider-head",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "card-eyebrow",
+                    children: "Plan options"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/PlanSlider.tsx",
+                    lineNumber: 90,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/components/PlanSlider.tsx",
+                lineNumber: 89,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "plan-slider-window",
+                "aria-label": "Plan options slider",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "plan-slider-track",
+                    children: plans.map((plan, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: `plan-slide${activeId === plan.id ? " is-active" : ""}`,
+                            "data-plan": plan.id,
+                            tabIndex: 0,
+                            role: "button",
+                            "aria-pressed": activeId === plan.id,
+                            onClick: ()=>handleSelect(index),
+                            onKeyDown: (event)=>{
+                                if (event.key === "Enter" || event.key === " ") {
+                                    event.preventDefault();
+                                    handleSelect(index);
+                                }
+                            },
+                            ref: (element)=>{
+                                slideRefs.current[index] = element;
+                            },
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "plan-name",
+                                    children: plan.name
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/PlanSlider.tsx",
+                                    lineNumber: 113,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "plan",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "price",
+                                            children: plan.price
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/PlanSlider.tsx",
+                                            lineNumber: 115,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "per",
+                                            children: "per month"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/PlanSlider.tsx",
+                                            lineNumber: 116,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/components/PlanSlider.tsx",
+                                    lineNumber: 114,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "plan-note",
+                                    children: plan.note
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/PlanSlider.tsx",
+                                    lineNumber: 118,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                    className: "plan-features",
+                                    children: plan.features.map((feature)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: feature
+                                        }, feature, false, {
+                                            fileName: "[project]/src/components/PlanSlider.tsx",
+                                            lineNumber: 121,
+                                            columnNumber: 19
+                                        }, this))
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/PlanSlider.tsx",
+                                    lineNumber: 119,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, plan.id, true, {
+                            fileName: "[project]/src/components/PlanSlider.tsx",
+                            lineNumber: 95,
+                            columnNumber: 13
+                        }, this))
+                }, void 0, false, {
+                    fileName: "[project]/src/components/PlanSlider.tsx",
+                    lineNumber: 93,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/components/PlanSlider.tsx",
+                lineNumber: 92,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "plan-note",
+                children: "Starter is static website thats it. Growth and Authority include custom domain email + extras."
+            }, void 0, false, {
+                fileName: "[project]/src/components/PlanSlider.tsx",
+                lineNumber: 128,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/PlanSlider.tsx",
+        lineNumber: 88,
+        columnNumber: 5
+    }, this);
+}
+_s(PlanSlider, "/ZXOwdAhAwzrl4ww6XWZ7MWfI8k=");
+_c = PlanSlider;
+var _c;
+__turbopack_context__.k.register(_c, "PlanSlider");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+]);
+
+//# sourceMappingURL=src_components_PlanSlider_tsx_01r9.7p._.js.map

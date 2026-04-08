@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
-const ENDPOINT_URL = "https://nextyzedono-jf84h0k6wc9r.bluenovers.deno.net";
+const ENDPOINT_URL = "https://nextyzedono-gs4fe1793bwg.bluenovers.deno.net";
 
 const PLAN_OPTIONS = [
   { value: "starter", label: "Starter (static) — $25" },

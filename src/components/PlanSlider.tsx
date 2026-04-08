@@ -1,5 +1,6 @@
 'use client';
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const plans = [
@@ -121,6 +122,9 @@ export default function PlanSlider() {
                   <li key={feature}>{feature}</li>
                 ))}
               </ul>
+              <Link className="btn ghost small plan-cta" href={`/contact?plan=${plan.id}`}>
+                Continue
+              </Link>
             </div>
           ))}
         </div>

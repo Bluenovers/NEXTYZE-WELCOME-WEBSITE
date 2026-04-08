@@ -37,6 +37,9 @@ export default function PlansPage() {
               <li>Mobile-first build</li>
               <li>Unlimited edits</li>
             </ul>
+            <a className="btn ghost small plan-cta" href="/contact?plan=starter">
+              Continue
+            </a>
           </div>
           <div className="plan-card">
             <p className="plan-name">Growth</p>
@@ -53,6 +56,9 @@ export default function PlansPage() {
               <li>Mobile-first build</li>
               <li>Unlimited edits</li>
             </ul>
+            <a className="btn ghost small plan-cta" href="/contact?plan=growth">
+              Continue
+            </a>
           </div>
           <div className="plan-card">
             <p className="plan-name">Authority</p>
@@ -69,6 +75,9 @@ export default function PlansPage() {
               <li>Performance optimization</li>
               <li>Unlimited edits</li>
             </ul>
+            <a className="btn ghost small plan-cta" href="/contact?plan=authority">
+              Continue
+            </a>
           </div>
         </div>
       </section>

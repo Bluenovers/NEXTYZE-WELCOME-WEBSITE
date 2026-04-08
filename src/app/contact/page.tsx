@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Nextyze | Contact",
@@ -26,28 +27,39 @@ export default function ContactPage() {
       </section>
 
       <section className="section">
-        <div className="contact-grid">
-          <div className="card">
-            <h4 className="card-title">Email</h4>
-            <p className="description">hello@nextyze.com</p>
-            <p className="note">We reply within 1 business day.</p>
+        <div className="contact-layout">
+          <div className="card form-card">
+            <div>
+              <h3 className="section-title">Request a quote</h3>
+              <p className="section-subtitle">
+                Share your goals and we will reply with next steps and pricing.
+              </p>
+            </div>
+            <ContactForm />
           </div>
-          <div className="card">
-            <h4 className="card-title">Start a plan</h4>
-            <p className="description">
-              Tell us your business, audience size, and desired pages.
-            </p>
-            <Link className="text-link" href="/plans">
-              Compare plans
-            </Link>
-          </div>
-          <div className="card">
-            <h4 className="card-title">What to share</h4>
-            <ul className="feature-list">
-              <li>Logo, brand colors, and fonts</li>
-              <li>Services, bio, and key links</li>
-              <li>Photos, press, or social handles</li>
-            </ul>
+          <div className="contact-grid">
+            <div className="card">
+              <h4 className="card-title">Email</h4>
+              <p className="description">support@nextyze.com</p>
+              <p className="note">We reply within 1 business day.</p>
+            </div>
+            <div className="card">
+              <h4 className="card-title">Start a plan</h4>
+              <p className="description">
+                Tell us your business, audience size, and desired pages.
+              </p>
+              <Link className="text-link" href="/plans">
+                Compare plans
+              </Link>
+            </div>
+            <div className="card">
+              <h4 className="card-title">What to share</h4>
+              <ul className="feature-list">
+                <li>Logo, brand colors, and fonts</li>
+                <li>Services, bio, and key links</li>
+                <li>Photos, press, or social handles</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

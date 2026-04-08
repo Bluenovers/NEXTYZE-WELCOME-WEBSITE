@@ -330,6 +330,12 @@ img {
   display: inline-flex;
 }
 
+.btn.small {
+  letter-spacing: .18em;
+  padding: 8px 14px;
+  font-size: 10px;
+}
+
 .btn.primary {
   color: #031018;
   background: linear-gradient(135deg, #84dcff, #3fb4ff);
@@ -571,6 +577,11 @@ img {
   box-shadow: 0 22px 40px #00000073, inset 0 0 0 1px #ffffff0a;
 }
 
+.plan-cta {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
 .plan-card:after {
   content: "";
   opacity: .75;
@@ -777,6 +788,92 @@ img {
   display: grid;
 }
 
+.contact-layout {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  align-items: start;
+  gap: clamp(16px, 3vw, 24px);
+  display: grid;
+}
+
+.contact-layout .contact-grid {
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.form-card {
+  gap: 18px;
+  display: grid;
+}
+
+.form-grid {
+  gap: 12px;
+  display: grid;
+}
+
+.form-row {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  display: grid;
+}
+
+.form-field {
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  gap: 8px;
+  font-size: 11px;
+  display: grid;
+}
+
+.form-field span {
+  font-size: 11px;
+}
+
+.form-field input, .form-field textarea, .form-field select {
+  width: 100%;
+  color: var(--text);
+  letter-spacing: 0;
+  text-transform: none;
+  transition: border-color .3s var(--ease-out), box-shadow .3s var(--ease-out);
+  background: #080c12a6;
+  border: 1px solid #7dc8ff2e;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-field input:focus, .form-field textarea:focus, .form-field select:focus {
+  border-color: #7dc8ff73;
+  outline: none;
+  box-shadow: 0 0 0 3px #3fb4ff2e;
+}
+
+.form-actions {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  display: flex;
+}
+
+.form-status {
+  color: var(--text-soft);
+  font-size: 13px;
+}
+
+.form-status.is-error {
+  color: #ffb3b3;
+}
+
+.form-status.is-success {
+  color: #a2f2c5;
+}
+
 .footer {
   color: var(--text-soft);
   border-top: 1px solid #7dc8ff29;
@@ -862,7 +959,7 @@ img {
     width: 100%;
   }
 
-  .split {
+  .split, .contact-layout {
     grid-template-columns: 1fr;
   }
 }
@@ -959,6 +1056,10 @@ img {
 
   .plan-slider .plan-note {
     font-size: 13px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
   }
 }
 

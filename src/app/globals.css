@@ -338,6 +338,12 @@ img {
 	transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out), border-color 0.35s var(--ease-out);
 }
 
+.btn.small {
+	font-size: 10px;
+	letter-spacing: 0.18em;
+	padding: 8px 14px;
+}
+
 .btn.primary {
 	background: linear-gradient(135deg, #84dcff, #3fb4ff);
 	color: #031018;
@@ -578,6 +584,11 @@ img {
 	gap: 8px;
 }
 
+.plan-cta {
+	margin-top: auto;
+	align-self: flex-start;
+}
+
 .plan-card::after {
 	content: "";
 	position: absolute;
@@ -791,6 +802,96 @@ img {
 	gap: 16px;
 }
 
+.contact-layout {
+	display: grid;
+	grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+	gap: clamp(16px, 3vw, 24px);
+	align-items: start;
+}
+
+.contact-layout .contact-grid {
+	grid-template-columns: 1fr;
+	gap: 12px;
+}
+
+.form-card {
+	display: grid;
+	gap: 18px;
+}
+
+.form-grid {
+	display: grid;
+	gap: 12px;
+}
+
+.form-row {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+}
+
+.form-field {
+	display: grid;
+	gap: 8px;
+	font-size: 11px;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--text-soft);
+}
+
+.form-field span {
+	font-size: 11px;
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+	width: 100%;
+	border-radius: 12px;
+	border: 1px solid rgba(125, 200, 255, 0.18);
+	background: rgba(8, 12, 18, 0.65);
+	color: var(--text);
+	padding: 12px 14px;
+	font-size: 14px;
+	letter-spacing: 0;
+	text-transform: none;
+	font-family: inherit;
+	transition: border-color 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+
+.form-field textarea {
+	min-height: 120px;
+	resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+	outline: none;
+	border-color: rgba(125, 200, 255, 0.45);
+	box-shadow: 0 0 0 3px rgba(63, 180, 255, 0.18);
+}
+
+.form-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	align-items: center;
+}
+
+.form-status {
+	font-size: 13px;
+	color: var(--text-soft);
+}
+
+.form-status.is-error {
+	color: #ffb3b3;
+}
+
+.form-status.is-success {
+	color: #a2f2c5;
+}
+
 .footer {
 	display: flex;
 	align-items: center;
@@ -881,6 +982,10 @@ img {
 	}
 
 	.split {
+		grid-template-columns: 1fr;
+	}
+
+	.contact-layout {
 		grid-template-columns: 1fr;
 	}
 }
@@ -984,6 +1089,10 @@ img {
 
 	.plan-slider .plan-note {
 		font-size: 13px;
+	}
+
+	.form-row {
+		grid-template-columns: 1fr;
 	}
 }
 

@@ -104,6 +104,7 @@ img {
 .brand {
   flex-direction: column;
   gap: 0;
+  margin-top: 12px;
   display: flex;
 }
 

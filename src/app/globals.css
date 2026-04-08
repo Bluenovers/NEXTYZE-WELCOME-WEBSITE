@@ -109,6 +109,7 @@ img {
 	display: flex;
 	flex-direction: column;
 	gap: 0;
+	margin-top: 12px;
 }
 
 .brand h1 {

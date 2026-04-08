@@ -792,8 +792,38 @@ img {
 }
 
 @media screen and (max-width: 700px) {
+	html,
+	body {
+		min-height: 100svh;
+	}
+
 	body {
 		background-attachment: scroll;
+		overscroll-behavior-y: none;
+	}
+
+	body::before {
+		position: absolute;
+	}
+
+	.page {
+		gap: 32px;
+	}
+
+	.content {
+		gap: 32px;
+	}
+
+	.site-header {
+		gap: 14px;
+	}
+
+	.nav {
+		padding: 8px;
+		border-radius: 16px;
+		border: 1px solid rgba(154, 217, 255, 0.18);
+		background: rgba(8, 12, 18, 0.55);
+		backdrop-filter: blur(10px);
 	}
 
 	.hero {
@@ -845,12 +875,20 @@ img {
 	}
 
 	.stats {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
+		display: flex;
 		gap: 10px;
+		overflow-x: auto;
+		padding-bottom: 4px;
+		scrollbar-width: none;
+	}
+
+	.stats::-webkit-scrollbar {
+		display: none;
 	}
 
 	.stat-card {
 		padding: 10px 12px;
+		min-width: 150px;
 	}
 
 	.stat-number {
@@ -864,6 +902,9 @@ img {
 	.plan-slider {
 		padding: 16px;
 		border-radius: 18px;
+		background: linear-gradient(160deg, rgba(12, 20, 30, 0.82), rgba(8, 12, 18, 0.6));
+		border: 1px solid rgba(154, 217, 255, 0.18);
+		box-shadow: 0 20px 38px rgba(0, 0, 0, 0.4);
 	}
 
 	.plan-slider-track {
@@ -995,7 +1036,7 @@ img {
 	}
 
 	.stats {
-		grid-template-columns: 1fr;
+		gap: 8px;
 	}
 }
 

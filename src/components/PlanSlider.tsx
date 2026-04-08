@@ -60,6 +60,7 @@ const getScrollBehavior = () => {
 export default function PlanSlider() {
   const [activeId, setActiveId] = useState("starter");
   const slideRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const sliderRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const starterIndex = plans.findIndex((plan) => plan.id === "starter");
@@ -83,10 +84,17 @@ export default function PlanSlider() {
         block: "nearest",
       });
     }
+
+    if (sliderRef.current) {
+      sliderRef.current.scrollIntoView({
+        behavior: getScrollBehavior(),
+        block: "center",
+      });
+    }
   };
 
   return (
-    <div className="card plan-slider">
+    <div className="card plan-slider" ref={sliderRef} id="plan-options">
       <div className="plan-slider-head">
         <p className="card-eyebrow">Plan options</p>
       </div>

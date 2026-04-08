@@ -353,6 +353,18 @@ img {
   border-color: #7dc8ff33;
 }
 
+.btn.plan-cta {
+  color: #fff;
+  background: linear-gradient(135deg, #7dc8ff59, #3fb4ff2e);
+  border-color: #7dc8ff99;
+  box-shadow: 0 12px 24px #3fb4ff59;
+}
+
+.btn.plan-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px #3fb4ff73;
+}
+
 .note {
   color: var(--text-soft);
   margin: 0 0 18px;

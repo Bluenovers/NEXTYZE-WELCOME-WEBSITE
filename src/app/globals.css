@@ -361,6 +361,18 @@ img {
 	border-color: rgba(125, 200, 255, 0.2);
 }
 
+.btn.plan-cta {
+	background: linear-gradient(135deg, rgba(125, 200, 255, 0.35), rgba(63, 180, 255, 0.18));
+	color: white;
+	border-color: rgba(125, 200, 255, 0.6);
+	box-shadow: 0 12px 24px rgba(63, 180, 255, 0.35);
+}
+
+.btn.plan-cta:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 16px 32px rgba(63, 180, 255, 0.45);
+}
+
 .note {
 	margin: 0 0 18px 0;
 	font-size: 14px;

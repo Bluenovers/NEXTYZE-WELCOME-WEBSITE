@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
@@ -35,7 +36,9 @@ export default function ContactPage() {
                 Share your goals and we will reply with next steps and pricing.
               </p>
             </div>
-            <ContactForm />
+            <Suspense fallback={<p className="note">Loading form...</p>}>
+              <ContactForm />
+            </Suspense>
           </div>
           <div className="contact-grid">
             <div className="card">

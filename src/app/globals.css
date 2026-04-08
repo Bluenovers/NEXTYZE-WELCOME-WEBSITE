@@ -561,6 +561,7 @@ img {
 	font-size: clamp(28px, 5vw, 40px);
 	font-weight: 600;
 	background: linear-gradient(135deg, #b7e7ff, #3fb4ff);
+	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
 	text-shadow: 0 8px 18px rgba(63, 180, 255, 0.35);

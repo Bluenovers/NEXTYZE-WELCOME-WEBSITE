@@ -879,6 +879,10 @@ img {
 }
 
 @media screen and (max-width: 700px) {
+	.brand h2 {
+		-webkit-text-stroke: 1.4px white;
+	}
+
 	html,
 	body {
 		min-height: 100svh;
@@ -1061,7 +1065,7 @@ img {
 
 @media screen and (max-width: 360px) {
 	.brand h2 {
-		-webkit-text-stroke: 1.5px white;
+		-webkit-text-stroke: 1.2px white;
 	}
 }
 

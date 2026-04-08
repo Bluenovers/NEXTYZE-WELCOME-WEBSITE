@@ -35,7 +35,6 @@ export default function ContactForm() {
     name: "",
     email: "",
     company: "",
-    website: "",
     plan: "starter",
     timeline: "",
     message: "",
@@ -73,7 +72,6 @@ export default function ContactForm() {
     const details = [
       `Plan: ${planLabel}`,
       `Company: ${form.company || "N/A"}`,
-      `Website: ${form.website || "N/A"}`,
       `Timeline: ${form.timeline || "N/A"}`,
       "",
       form.message || "No message provided.",
@@ -96,7 +94,20 @@ export default function ContactForm() {
 
       if (!response.ok) {
         const detail = await response.text();
-        throw new Error(detail || "Send failed");
+        let message = "Send failed. Please try again.";
+
+        try {
+          const parsed = JSON.parse(detail);
+          if (parsed?.error) {
+            message = String(parsed.error);
+          }
+        } catch {
+          if (detail) {
+            message = detail;
+          }
+        }
+
+        throw new Error(message);
       }
 
       setStatus("sent");
@@ -104,14 +115,23 @@ export default function ContactForm() {
         name: "",
         email: "",
         company: "",
-        website: "",
         plan: form.plan,
         timeline: "",
         message: "",
       });
     } catch (sendError) {
+      const fallback = "Something went wrong. Please try again or email us directly.";
+      let message = fallback;
+
+      if (sendError instanceof Error) {
+        message = sendError.message || fallback;
+        if (message.toLowerCase().includes("failed to fetch")) {
+          message = "Network error. Please try again or email us directly.";
+        }
+      }
+
       setStatus("error");
-      setError("Something went wrong. Please try again or email us directly.");
+      setError(message);
     }
   };
 
@@ -150,16 +170,6 @@ export default function ContactForm() {
             name="company"
             placeholder="Company name"
             value={form.company}
-            onChange={handleChange}
-          />
-        </label>
-        <label className="form-field">
-          <span>Website</span>
-          <input
-            type="url"
-            name="website"
-            placeholder="https://"
-            value={form.website}
             onChange={handleChange}
           />
         </label>

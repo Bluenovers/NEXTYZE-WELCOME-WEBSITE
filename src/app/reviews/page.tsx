@@ -37,7 +37,7 @@ export default function ReviewsPage() {
           </div>
           <div className="review-item">
             <p className="review-text">
-              "Responsive on every screen size and the static build stays lightweight."
+              "Responsive on every screen size and the site stays lightweight."
             </p>
             <span className="review-name">- Mark J., studio founder</span>
           </div>

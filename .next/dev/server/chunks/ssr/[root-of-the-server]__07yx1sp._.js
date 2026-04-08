@@ -36,7 +36,7 @@ function AboutPage() {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                         className: "headline",
-                        children: "A focused studio for premium static experiences."
+                        children: "A focused studio for premium web experiences."
                     }, void 0, false, {
                         fileName: "[project]/src/app/about/page.tsx",
                         lineNumber: 12,
@@ -44,7 +44,7 @@ function AboutPage() {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "description",
-                        children: "Nextyze builds high-end static sites for firms and creators with momentum. We keep the process lean and the output refined."
+                        children: "Nextyze builds high-end websites for firms and creators with momentum. We keep the process lean and the output refined."
                     }, void 0, false, {
                         fileName: "[project]/src/app/about/page.tsx",
                         lineNumber: 13,
@@ -55,7 +55,7 @@ function AboutPage() {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "badge",
-                                children: "Static-first delivery"
+                                children: "Design-first delivery"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/about/page.tsx",
                                 lineNumber: 18,
@@ -114,7 +114,7 @@ function AboutPage() {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                 className: "section-title",
-                                children: "Why static"
+                                children: "Why Nextyze"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/about/page.tsx",
                                 lineNumber: 33,
@@ -122,7 +122,7 @@ function AboutPage() {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "bio",
-                                children: "Static sites are fast, secure, and easy to maintain. They keep your message front and center without the overhead of a complex app."
+                                children: "Modern websites are fast, secure, and easy to maintain. We keep your message front and center without unnecessary complexity."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/about/page.tsx",
                                 lineNumber: 34,
@@ -193,7 +193,7 @@ function AboutPage() {
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                children: "Design and build the static site with brand polish."
+                                                children: "Design and build the website with brand polish."
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/about/page.tsx",
                                                 lineNumber: 53,

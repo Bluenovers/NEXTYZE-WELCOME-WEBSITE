@@ -9,13 +9,13 @@ export default function PlansPage() {
     <main className="content container">
       <section className="page-hero">
         <p className="kicker">Plans</p>
-        <h3 className="headline">Static website subscriptions that scale with your brand.</h3>
+        <h3 className="headline">Website subscriptions that scale with your brand.</h3>
         <p className="description">
-          Every plan includes domain, hosting, and a static build. Choose the tier
-          based on page count and support depth.
+          Every plan includes domain, hosting, and a full website build. Choose the
+          tier based on page count and support depth.
         </p>
         <div className="badge-row">
-          <span className="badge">Static website thats it</span>
+          <span className="badge">Website build only</span>
           <span className="badge">Domain + hosting included</span>
         </div>
       </section>
@@ -28,9 +28,9 @@ export default function PlansPage() {
               <span className="price">$25</span>
               <span className="per">per month</span>
             </div>
-            <p className="plan-note">Essential static site with domain + hosting included.</p>
+            <p className="plan-note">Static one-page site with domain + hosting included.</p>
             <ul className="plan-features">
-              <li>One-page layout</li>
+              <li>Static one-page website</li>
               <li>Custom typography + colors</li>
               <li>SEO basics + indexing</li>
               <li>Domain + hosting included</li>

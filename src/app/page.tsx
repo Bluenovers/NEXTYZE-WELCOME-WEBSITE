@@ -7,14 +7,14 @@ export default function Home() {
       <section className="hero">
         <div className="hero-copy">
           <div className="hero-intro">
-            <p className="kicker">Static website studio</p>
+            <p className="kicker">Website studio</p>
             <h3 className="headline">
               Websites for established firms and influencers who want a clean,
               reliable online presence.
             </h3>
             <p className="description">
-              We design fast, static sites for businesses with existing audiences.
-              Simple, polished, and dependable month after month.
+              We design fast, premium websites for businesses with existing
+              audiences. Simple, polished, and dependable month after month.
             </p>
           </div>
 
@@ -28,10 +28,13 @@ export default function Home() {
               </Link>
             </div>
             <div className="badge-row">
-              <span className="badge">Static website thats it</span>
+              <span className="badge">Website build only</span>
               <span className="badge">Domain + hosting included</span>
             </div>
-            <p className="note">Average launch time: 7 days. All plans stay static.</p>
+            <p className="note">
+              Average launch time: 7 days. Starter is static; Growth and Authority
+              add email + expansion.
+            </p>
             <div className="stats">
               <div className="stat-card">
                 <span className="stat-number">1000+</span>
@@ -61,7 +64,7 @@ export default function Home() {
         </div>
         <div className="info-grid">
           <div className="info-card">
-            <h4 className="card-title">Static speed</h4>
+            <h4 className="card-title">Speed first</h4>
             <p className="description">
               Fast load times with a clean layout that highlights your message
               and brand.
@@ -70,8 +73,8 @@ export default function Home() {
           <div className="info-card">
             <h4 className="card-title">Always-on care</h4>
             <p className="description">
-              We handle updates, tweaks, and polish without moving you off a
-              static stack.
+              We handle updates, tweaks, and polish without slowing your site
+              down.
             </p>
           </div>
           <div className="info-card">
@@ -99,7 +102,7 @@ export default function Home() {
         <div className="card">
           <h3 className="section-title">Reviews</h3>
           <p className="description">
-            Sample feedback from clients who needed a clean static presence.
+            Sample feedback from clients who needed a clean web presence.
           </p>
           <Link className="text-link" href="/reviews">
             View review highlights
@@ -110,7 +113,7 @@ export default function Home() {
       <section className="section">
         <div className="card cta-card">
           <h3 className="card-title">
-            Ready for a static website that fits your brand?
+            Ready for a website that fits your brand?
           </h3>
           <p className="description">
             Pick a plan, share your assets, and we ship a polished site with

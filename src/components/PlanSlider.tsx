@@ -21,9 +21,9 @@ const plans = [
     id: "starter",
     name: "Starter",
     price: "$25",
-    note: "Essential static site with domain + hosting.",
+    note: "Static one-page site with domain + hosting.",
     features: [
-      "One-page layout",
+      "Static one-page website",
       "Custom typography",
       "SEO basics",
       "Unlimited edits",
@@ -126,7 +126,7 @@ export default function PlanSlider() {
         </div>
       </div>
       <p className="plan-note">
-        Starter is a one-page static site. Growth and Authority include email +
+        Starter is a static one-page site. Growth and Authority include email +
         expanded support.
       </p>
     </div>

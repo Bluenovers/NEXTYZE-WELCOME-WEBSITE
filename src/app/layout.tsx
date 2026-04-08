@@ -4,8 +4,8 @@ import SiteHeader from "@/components/SiteHeader";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Nextyze | Static Websites",
-  description: "Static websites for established firms and creators.",
+  title: "Nextyze | Website Studio",
+  description: "Websites for established firms and creators.",
   icons: {
     icon: "/images/icon.png",
   },

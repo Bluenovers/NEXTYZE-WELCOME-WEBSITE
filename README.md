@@ -1,6 +1,6 @@
 # Nextyze
 
-Static Next.js (App Router) site for the Nextyze marketing pages.
+Next.js (App Router) site for the Nextyze marketing pages.
 
 ## Development
 
@@ -8,10 +8,10 @@ Static Next.js (App Router) site for the Nextyze marketing pages.
 npm run dev
 ```
 
-## Static Export
+## Export
 
 ```bash
 npm run build
 ```
 
-The static output is generated in the `out/` directory.
+The output is generated in the `out/` directory.

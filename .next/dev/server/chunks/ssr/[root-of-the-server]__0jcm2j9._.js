@@ -36,7 +36,7 @@ function PlansPage() {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                         className: "headline",
-                        children: "Static website subscriptions that scale with your brand."
+                        children: "Website subscriptions that scale with your brand."
                     }, void 0, false, {
                         fileName: "[project]/src/app/plans/page.tsx",
                         lineNumber: 12,
@@ -44,7 +44,7 @@ function PlansPage() {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "description",
-                        children: "Every plan includes domain, hosting, and a static build. Choose the tier based on page count and support depth."
+                        children: "Every plan includes domain, hosting, and a full website build. Choose the tier based on page count and support depth."
                     }, void 0, false, {
                         fileName: "[project]/src/app/plans/page.tsx",
                         lineNumber: 13,
@@ -55,7 +55,7 @@ function PlansPage() {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "badge",
-                                children: "Static website thats it"
+                                children: "Website build only"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/plans/page.tsx",
                                 lineNumber: 18,
@@ -125,7 +125,7 @@ function PlansPage() {
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "plan-note",
-                                    children: "Essential static site with domain + hosting included."
+                                    children: "Static one-page site with domain + hosting included."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/plans/page.tsx",
                                     lineNumber: 31,
@@ -135,7 +135,7 @@ function PlansPage() {
                                     className: "plan-features",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: "One-page layout"
+                                            children: "Static one-page website"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/plans/page.tsx",
                                             lineNumber: 33,

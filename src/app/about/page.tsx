@@ -9,13 +9,13 @@ export default function AboutPage() {
     <main className="content container">
       <section className="page-hero">
         <p className="kicker">About</p>
-        <h3 className="headline">A focused studio for premium static experiences.</h3>
+        <h3 className="headline">A focused studio for premium web experiences.</h3>
         <p className="description">
-          Nextyze builds high-end static sites for firms and creators with momentum.
-          We keep the process lean and the output refined.
+          Nextyze builds high-end websites for firms and creators with momentum. We
+          keep the process lean and the output refined.
         </p>
         <div className="badge-row">
-          <span className="badge">Static-first delivery</span>
+          <span className="badge">Design-first delivery</span>
           <span className="badge">White-glove updates</span>
         </div>
       </section>
@@ -30,10 +30,10 @@ export default function AboutPage() {
           </p>
         </div>
         <div className="card">
-          <h3 className="section-title">Why static</h3>
+          <h3 className="section-title">Why Nextyze</h3>
           <p className="bio">
-            Static sites are fast, secure, and easy to maintain. They keep your
-            message front and center without the overhead of a complex app.
+            Modern websites are fast, secure, and easy to maintain. We keep your
+            message front and center without unnecessary complexity.
           </p>
         </div>
       </section>
@@ -50,7 +50,7 @@ export default function AboutPage() {
             <h4 className="card-title">Process</h4>
             <ol className="steps">
               <li>Kickoff call to map your content and goals.</li>
-              <li>Design and build the static site with brand polish.</li>
+              <li>Design and build the website with brand polish.</li>
               <li>Launch with domain, hosting, and unlimited edits 24/7.</li>
             </ol>
           </div>

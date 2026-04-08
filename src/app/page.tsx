@@ -6,7 +6,7 @@ export default function Home() {
     <main className="content container">
       <section className="hero">
         <div className="hero-copy">
-          <div className="hero-copy-top">
+          <div className="hero-intro">
             <p className="kicker">Static website studio</p>
             <h3 className="headline">
               Websites for established firms and influencers who want a clean,
@@ -18,11 +18,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="hero-copy-bottom">
-            <div className="badge-row">
-              <span className="badge">Static website thats it</span>
-              <span className="badge">Domain + hosting included</span>
-            </div>
+          <div className="hero-details">
             <div className="hero-actions">
               <Link className="btn primary" href="/plans">
                 View plans
@@ -30,6 +26,10 @@ export default function Home() {
               <Link className="btn ghost" href="/contact">
                 Start a site
               </Link>
+            </div>
+            <div className="badge-row">
+              <span className="badge">Static website thats it</span>
+              <span className="badge">Domain + hosting included</span>
             </div>
             <p className="note">Average launch time: 7 days. All plans stay static.</p>
             <div className="stats">

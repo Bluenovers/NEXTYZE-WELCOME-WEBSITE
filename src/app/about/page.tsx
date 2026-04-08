@@ -9,13 +9,14 @@ export default function AboutPage() {
     <main className="content container">
       <section className="page-hero">
         <p className="kicker">About</p>
-        <h3 className="headline">A focused studio for clean, static websites.</h3>
+        <h3 className="headline">A focused studio for premium static experiences.</h3>
         <p className="description">
-          Nextyze builds static sites for firms and creators who already have
-          momentum. We keep the process lean and the output polished.
+          Nextyze builds high-end static sites for firms and creators with momentum.
+          We keep the process lean and the output refined.
         </p>
         <div className="badge-row">
-          <span className="badge">Static website thats it</span>
+          <span className="badge">Static-first delivery</span>
+          <span className="badge">White-glove updates</span>
         </div>
       </section>
 
@@ -25,7 +26,7 @@ export default function AboutPage() {
           <p className="bio">
             Nextyze is a small studio led by a founder who has shipped hundreds of
             fast, focused sites for busy teams. We specialize in clear messaging,
-            clean design, and dependable hosting.
+            refined design, and dependable hosting.
           </p>
         </div>
         <div className="card">

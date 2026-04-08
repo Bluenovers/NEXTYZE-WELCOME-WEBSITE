@@ -7,7 +7,7 @@ const plans = [
     id: "growth",
     name: "Growth",
     price: "$49",
-    note: "Includes custom domain email + business tools.",
+    note: "Multi-page site with business email.",
     features: [
       "Up to 5 pages",
       "Custom domain email",
@@ -21,7 +21,7 @@ const plans = [
     id: "starter",
     name: "Starter",
     price: "$25",
-    note: "Static website with domain + hosting.",
+    note: "Essential static site with domain + hosting.",
     features: [
       "One-page layout",
       "Custom typography",
@@ -35,7 +35,7 @@ const plans = [
     id: "authority",
     name: "Authority",
     price: "$120",
-    note: "Includes advanced support.",
+    note: "Full-scale site with priority support.",
     features: [
       "Unlimited pages",
       "Custom domain email suite",
@@ -126,8 +126,8 @@ export default function PlanSlider() {
         </div>
       </div>
       <p className="plan-note">
-        Starter is static website thats it. Growth and Authority include custom
-        domain email + extras.
+        Starter is a one-page static site. Growth and Authority include email +
+        expanded support.
       </p>
     </div>
   );

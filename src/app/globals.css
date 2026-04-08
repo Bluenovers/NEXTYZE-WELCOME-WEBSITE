@@ -215,38 +215,38 @@ img {
 	box-shadow: var(--shadow-soft);
 }
 
-.hero-copy-top,
-.hero-copy-bottom {
+.hero-intro,
+.hero-details {
 	margin-top: 0;
 	transform: none;
 }
 
-.hero-copy-bottom {
+.hero-details {
 	display: grid;
 	gap: 16px;
 	padding-top: 16px;
 	border-top: 1px solid rgba(125, 200, 255, 0.12);
 }
 
-.hero-copy-bottom .badge-row {
+.hero-details .badge-row {
 	margin-bottom: 0;
 }
 
-.hero-copy-bottom .hero-actions,
-.hero-copy-bottom .note {
+.hero-details .hero-actions,
+.hero-details .note {
 	margin: 0;
 }
 
-.hero-copy-top .kicker {
+.hero-intro .kicker {
 	font-size: 11px;
 	margin-bottom: 8px;
 }
 
-.hero-copy-top .headline {
+.hero-intro .headline {
 	font-size: clamp(32px, 4.6vw, 52px);
 }
 
-.hero-copy-top .description {
+.hero-intro .description {
 	font-size: 16px;
 }
 
@@ -913,11 +913,11 @@ img {
 		border-radius: 18px;
 	}
 
-	.hero-copy-top .headline {
+	.hero-intro .headline {
 		font-size: clamp(26px, 7.2vw, 34px);
 	}
 
-	.hero-copy-top .description {
+	.hero-intro .description {
 		font-size: 15px;
 	}
 
@@ -1013,21 +1013,21 @@ img {
 		font-size: clamp(24px, 8vw, 32px);
 	}
 
-	.hero-copy-top {
+	.hero-intro {
 		margin-top: 0;
 		transform: none;
 	}
 
-	.hero-copy-bottom {
+	.hero-details {
 		margin-top: 0;
 		transform: none;
 	}
 
-	.hero-copy-top .headline {
+	.hero-intro .headline {
 		font-size: clamp(25px, 8.4vw, 34px);
 	}
 
-	.hero-copy-top .description {
+	.hero-intro .description {
 		font-size: 15px;
 	}
 

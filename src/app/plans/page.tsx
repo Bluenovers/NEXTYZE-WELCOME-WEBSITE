@@ -28,47 +28,46 @@ export default function PlansPage() {
               <span className="price">$25</span>
               <span className="per">per month</span>
             </div>
-            <p className="plan-note">Static website thats it. Domain + hosting + SSL included.</p>
+            <p className="plan-note">Essential static site with domain + hosting included.</p>
             <ul className="plan-features">
-              <li>Static website thats it (no email suite)</li>
-              <li>One-page layout: hero, services, about, contact</li>
-              <li>Custom typography, colors, and spacing system</li>
-              <li>SEO basics: titles, meta descriptions, OG image</li>
-              <li>Performance pass: image compression + fast load</li>
-              <li>Unlimited edits 24/7</li>
+              <li>One-page layout</li>
+              <li>Custom typography + colors</li>
+              <li>SEO basics + indexing</li>
+              <li>Domain + hosting included</li>
+              <li>Mobile-first build</li>
+              <li>Unlimited edits</li>
             </ul>
           </div>
           <div className="plan-card">
             <p className="plan-name">Growth</p>
             <div className="plan">
-              <span className="price">$79</span>
+              <span className="price">$49</span>
               <span className="per">per month</span>
             </div>
-            <p className="plan-note">Includes custom domain email + business tools.</p>
+            <p className="plan-note">Multi-page site with business email + analytics.</p>
             <ul className="plan-features">
-              <li>Up to 5 pages plus a focused landing section</li>
-              <li>Navigation structure + internal linking</li>
-              <li>Custom domain email (example@yourdomain.com)</li>
-              <li>Mailbox setup + aliases + forwarding</li>
-              <li>SEO setup + analytics + performance checks</li>
-              <li>Unlimited edits 24/7</li>
+              <li>Up to 5 pages</li>
+              <li>Custom domain email</li>
+              <li>Navigation + internal links</li>
+              <li>SEO + analytics setup</li>
+              <li>Mobile-first build</li>
+              <li>Unlimited edits</li>
             </ul>
           </div>
           <div className="plan-card">
             <p className="plan-name">Authority</p>
             <div className="plan">
-              <span className="price">$149</span>
+              <span className="price">$120</span>
               <span className="per">per month</span>
             </div>
-            <p className="plan-note">Includes custom domain email + advanced support.</p>
+            <p className="plan-note">Full-scale site with priority support.</p>
             <ul className="plan-features">
-              <li>Unlimited pages + campaign landing pages</li>
-              <li>Custom domain email suite (example@yourdomain.com)</li>
-              <li>Multiple mailboxes + aliases + forwarding</li>
-              <li>Copy polish, brand refresh, and layout upgrades</li>
-              <li>Priority support with fast turnarounds</li>
-              <li>Ongoing performance review + optimization</li>
-              <li>Unlimited edits 24/7</li>
+              <li>Unlimited pages</li>
+              <li>Email suite + aliases</li>
+              <li>Brand refresh + copy polish</li>
+              <li>Priority support</li>
+              <li>Performance optimization</li>
+              <li>Unlimited edits</li>
             </ul>
           </div>
         </div>
@@ -79,18 +78,18 @@ export default function PlansPage() {
           <h3 className="section-title">Included in every plan</h3>
           <ul className="feature-list">
             <li>Custom design aligned to your brand</li>
-            <li>Mobile-first layout for all screen sizes</li>
             <li>Domain + hosting + SSL management</li>
-            <li>Unlimited edits 24/7</li>
+            <li>Mobile-first layout for all screens</li>
             <li>Security and performance checks</li>
+            <li>Unlimited edits</li>
           </ul>
         </div>
         <div className="card">
           <h3 className="section-title">Upgrade options</h3>
           <ul className="feature-list">
-            <li>Custom domain email addresses (example@domain.com)</li>
+            <li>Custom domain email addresses</li>
             <li>Additional pages and landing pages</li>
-            <li>Campaign launches and seasonal refreshes</li>
+            <li>Campaign launches and refreshes</li>
             <li>SEO setup and analytics</li>
             <li>Priority support and faster turnaround</li>
           </ul>

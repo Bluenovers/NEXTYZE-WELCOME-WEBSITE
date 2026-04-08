@@ -9,7 +9,7 @@ export default function ReviewsPage() {
     <main className="content container">
       <section className="page-hero">
         <p className="kicker">Reviews</p>
-        <h3 className="headline">Sample reviews from teams and creators.</h3>
+        <h3 className="headline">Client notes from teams and creators.</h3>
         <p className="description">
           These are placeholders for layout until your real testimonials are ready.
         </p>

@@ -10,9 +10,9 @@ export default function ContactPage() {
     <main className="content container">
       <section className="page-hero">
         <p className="kicker">Contact</p>
-        <h3 className="headline">Start a static website in days, not weeks.</h3>
+        <h3 className="headline">Launch a premium static site in days.</h3>
         <p className="description">
-          Send your brand assets and goals. We will build and host the site for a
+          Send your brand assets and goals. We build and host the site under a
           simple monthly plan.
         </p>
         <div className="hero-actions">

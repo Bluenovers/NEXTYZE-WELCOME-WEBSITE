@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
+import ComingSoon from "@/components/ComingSoon";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import "./globals.css";
+
+// Flip to false to take the site live and drop the overlay.
+const COMING_SOON: boolean = true;
 
 export const metadata: Metadata = {
   title: "Nextyze | Website Studio",
@@ -17,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={COMING_SOON ? "is-coming-soon" : undefined}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -27,7 +31,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <div className="page">
+        <div className="page" inert={COMING_SOON}>
           <SiteHeader />
           {children}
           <SiteFooter />
@@ -37,6 +41,7 @@ export default function RootLayout({
           alt="Nextyze Icon"
           className="bottom-icon"
         />
+        {COMING_SOON ? <ComingSoon /> : null}
       </body>
     </html>
   );

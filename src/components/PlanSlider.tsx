@@ -48,57 +48,91 @@ const plans = [
   },
 ];
 
+// "auto" defers to the CSS scroll-behavior (smooth on .plan-slider-window),
+// so "instant" is what actually suppresses the animation.
 const getScrollBehavior = () => {
   if (typeof window === "undefined") {
-    return "auto" as ScrollBehavior;
+    return "instant" as ScrollBehavior;
   }
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    ? "auto"
+    ? "instant"
     : "smooth";
 };
 
+const defaultIndex = Math.max(
+  plans.findIndex((plan) => plan.id === "starter"),
+  0,
+);
+
 export default function PlanSlider() {
-  const [activeId, setActiveId] = useState("starter");
+  const [activeId, setActiveId] = useState(plans[defaultIndex].id);
   const slideRefs = useRef<Array<HTMLDivElement | null>>([]);
-  const sliderRef = useRef<HTMLDivElement | null>(null);
+  const windowRef = useRef<HTMLDivElement | null>(null);
+  const activeIndexRef = useRef(defaultIndex);
+
+  // Scroll the slider's own horizontal viewport. Never scrollIntoView: that
+  // walks every scrollable ancestor and drags the whole page down on mount.
+  const centerSlide = (index: number, behavior: ScrollBehavior) => {
+    const container = windowRef.current;
+    const slide = slideRefs.current[index];
+    if (!container || !slide) {
+      return;
+    }
+    const offset =
+      slide.getBoundingClientRect().left - container.getBoundingClientRect().left;
+    const left =
+      container.scrollLeft +
+      offset -
+      (container.clientWidth - slide.clientWidth) / 2;
+    container.scrollTo({ left, behavior });
+  };
 
   useEffect(() => {
-    const starterIndex = plans.findIndex((plan) => plan.id === "starter");
-    const slide = slideRefs.current[starterIndex];
-    if (slide) {
-      slide.scrollIntoView({
-        behavior: "auto",
-        inline: "center",
-        block: "nearest",
-      });
+    const container = windowRef.current;
+    let cancelled = false;
+
+    // The track only overflows once the webfonts land, so an early centering
+    // attempt clamps to 0. Re-run whenever the slider's measurements change.
+    const recenter = () => {
+      if (!cancelled) {
+        centerSlide(activeIndexRef.current, "instant");
+      }
+    };
+
+    const frame = requestAnimationFrame(recenter);
+    document.fonts?.ready.then(recenter);
+
+    const observer = new ResizeObserver(recenter);
+    if (container) {
+      observer.observe(container);
+      if (container.firstElementChild) {
+        observer.observe(container.firstElementChild);
+      }
     }
+
+    return () => {
+      cancelled = true;
+      cancelAnimationFrame(frame);
+      observer.disconnect();
+    };
   }, []);
 
   const handleSelect = (index: number) => {
+    activeIndexRef.current = index;
     setActiveId(plans[index].id);
-    const slide = slideRefs.current[index];
-    if (slide) {
-      slide.scrollIntoView({
-        behavior: getScrollBehavior(),
-        inline: "center",
-        block: "nearest",
-      });
-    }
-
-    if (sliderRef.current) {
-      sliderRef.current.scrollIntoView({
-        behavior: getScrollBehavior(),
-        block: "center",
-      });
-    }
+    centerSlide(index, getScrollBehavior());
   };
 
   return (
-    <div className="card plan-slider" ref={sliderRef} id="plan-options">
+    <div className="card plan-slider" id="plan-options">
       <div className="plan-slider-head">
         <p className="card-eyebrow">Plan options</p>
       </div>
-      <div className="plan-slider-window" aria-label="Plan options slider">
+      <div
+        className="plan-slider-window"
+        aria-label="Plan options slider"
+        ref={windowRef}
+      >
         <div className="plan-slider-track">
           {plans.map((plan, index) => (
             <div

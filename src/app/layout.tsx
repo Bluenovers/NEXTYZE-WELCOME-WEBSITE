@@ -8,7 +8,7 @@ import "./globals.css";
 const COMING_SOON: boolean = true;
 
 export const metadata: Metadata = {
-  title: "Nextyze | Website Studio",
+  title: "Nextyze",
   description: "Websites for established firms and creators.",
   icons: {
     icon: "/images/icon.png",
